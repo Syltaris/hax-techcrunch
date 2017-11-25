@@ -1,0 +1,41 @@
+
+<template name="GiftDetails">
+<div id="gift_details_container" class="container">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h4 class="modal-title">Gift Details</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-group">
+                    <label>Type: </label>
+                    <select class="form-control" name="gift_type" id="gift_type">
+                        <option>Angpow</option>
+                        <option>Flowers</option>
+                        <option>Movie Tickets</option>
+                        <option>Coffee</option>
+                        <option>Book</option>
+                    </select>
+                    <label class="custom-control custom-radio">
+                    <input id="gift_visibility_private" name="radio" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Private</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                    <input id="gift_visibility_public" name="radio" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Public</span>
+                    </label>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input name="message_first" class="form-check-input" type="checkbox" value="message_first">
+                        Message first?
+                    </label>
+                    </div>
+                    <button id="publish_gift" class="btn btn-default" data-dismiss="modal">DONE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</template>

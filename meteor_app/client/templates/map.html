@@ -1,0 +1,73 @@
+<template name="bmap">
+    <div id="allmap" ></div>
+    <div id="r-result">
+        <label>Location: 
+            <input id="lng_coords"/>
+            <input id="lat_coords"/>
+        </label>    
+        <div class="container" id="button_container">
+            <button class="btn btn-primary" type="button">Drop Gift</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point(121.371805, 31.174336);
+        map.centerAndZoom(point, 18);
+
+        var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+        var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+        var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
+        /*缩放控件type有四种类型:
+        BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+        
+        // add in some angpows
+        var pt = new BMap.Point(121.372048, 31.173849);
+        var myIcon = new BMap.Icon("http://icongal.com/gallery/download/477395/48/png", new BMap.Size(300,157));
+        var marker2 = new BMap.Marker(pt,{icon:myIcon});
+        map.addOverlay(marker2);
+
+        // add in some coffee
+        var pt = new BMap.Point(121.373503, 31.174768);
+        var myIcon = new BMap.Icon("https://www.shareicon.net/data/48x48/2015/05/12/37313_coffee_512x512.png", new BMap.Size(50,50));
+        var marker2 = new BMap.Marker(pt,{icon:myIcon});
+        map.addOverlay(marker2);
+
+        var pt = new BMap.Point(121.371733, 31.174954);
+        var myIcon = new BMap.Icon("https://www.shareicon.net/data/48x48/2015/05/12/37313_coffee_512x512.png", new BMap.Size(50,50));
+        var marker2 = new BMap.Marker(pt,{icon:myIcon});
+        map.addOverlay(marker2);
+
+        // movie tickets
+        var pt = new BMap.Point(121.373314, 31.17568);
+        var myIcon = new BMap.Icon("https://www.shareicon.net/data/48x48/2016/05/30/574859_movie_256x256.png", new BMap.Size(50,50));
+        var marker2 = new BMap.Marker(pt,{icon:myIcon});
+        map.addOverlay(marker2);
+
+        var pt = new BMap.Point(121.372892, 31.173772);
+        var myIcon = new BMap.Icon("https://www.shareicon.net/data/48x48/2016/05/30/574859_movie_256x256.png", new BMap.Size(50,50));
+        var marker2 = new BMap.Marker(pt,{icon:myIcon});
+        map.addOverlay(marker2);
+
+
+        var marker = new BMap.Marker(point);
+        
+        map.addEventListener("click",function(e){
+            deletePoint();
+            add_marker(new BMap.Point(e.point.lng, e.point.lat));
+            document.getElementById('lng_coords').setAttribute('value', e.point.lng);
+            document.getElementById('lat_coords').setAttribute('value', e.point.lat);
+        });
+        
+        function deletePoint(){
+            var allOverlay = map.getOverlays();
+            map.removeOverlay(allOverlay[allOverlay.length-1]);
+        }
+
+        function add_marker(point) {
+            map.addOverlay(new BMap.Marker(point));
+        } 
+
+    </script>
+</template>
+      

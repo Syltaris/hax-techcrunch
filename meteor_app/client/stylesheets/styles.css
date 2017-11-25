@@ -1,0 +1,44 @@
+
+body {
+    align-content: center;
+    align-items: center;
+    background: #85144b;
+}
+
+#app_container {
+    padding: 5px;
+    width: 480px;
+    border-color: #000000;
+    border-width: 10px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+#allmap {
+    width: 100%;
+    height: 500px;
+}
+
+#button_container {
+    width: 100%;
+}
+
+    #button_container button {
+        margin: 5;
+        width: 100%;
+    }
+
+#gift_details_container {
+    background-color: white;   
+}
+
+
+.modal .modal-dialog {
+    background-color: white;
+    border-radius: 5px;
+    width: 460px;
+}
+
+#publish_gift {
+    width: 100%;
+}
