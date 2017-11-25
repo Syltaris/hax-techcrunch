@@ -5,11 +5,8 @@ Router.configure({
 });
 
 Router.route('/', {
-    name: 'map',
-    waitOn() {
-        return [Meteor.subscribe('GiftMarkers')];
-    }
-})
+    name: 'bmap'
+});
 
 var requireLogin = function() {
     if (!Meteor.user()) {

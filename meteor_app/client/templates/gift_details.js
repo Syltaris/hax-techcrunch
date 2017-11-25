@@ -11,10 +11,10 @@ Template.GiftDetails.events({
         
         var marker_properties = {
             name: Meteor.user().username,
-            location: (data.location.value),
-            item: data.gift_type.value,
+            location: ($(e.target).find('[id=lng_coords]').val(), $(e.target).find('[id=lat_coords]').val()),
+            item: $(data).find('[id=gift_type]').val(),
             original_donater: Meteor.user().username,
-            gift_visibility_private: data.message_first.value,
+            gift_visibility_private: 'public',
         };
 
         console.log(marker_properties);

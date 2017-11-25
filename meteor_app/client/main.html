@@ -1,51 +1,8 @@
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>I Haven't Think About It</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HwjFs10C0VcmBsNN9axZABpy3ygfko81	"></script> 
 </head>
-
-<body>
-  <div id="app_container" class="container">
-    {{ > map }}
-  </div>
-</body>
-
-<template name="map">
-  <div id="allmap" ></div>
-  <div id="r-result">
-    {{ map }}
-    <div class="container" id="button_container">
-        <button class="btn btn-primary" type="button">Drop Gift</button>
-    </div>
-  </div>
-  <script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("allmap");
-    var point = new BMap.Point(116.404, 39.915);
-    map.centerAndZoom(point, 11);
-
-    var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
-    var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
-    var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
-    /*缩放控件type有四种类型:
-    BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
-    var marker = new BMap.Marker(point);
-    marker.enableDragging();
-
-    map.addEventListener("click",function(e){
-      deletePoint()
-      add_marker(new BMap.Point(e.point.lng, e.point.lat));
-    });
-
-    function deletePoint(){
-      var allOverlay = map.getOverlays();
-      for (var i = 0; i < allOverlay.length; i++){
-        map.removeOverlay(allOverlay[i]);
-		  }
-    }
-
-    function add_marker(point) {
-      map.addOverlay(new BMap.Marker(point));
-    } 
-
-  </script>
-</template>
