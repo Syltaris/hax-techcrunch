@@ -8,20 +8,22 @@
 		p{margin:5px; font-size:14px;}
 	</style>
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HwjFs10C0VcmBsNN9axZABpy3ygfko81	"></script>
-	<title>添加/删除工具条、比例尺控件</title>
+	<title>I Haven't Think About It</title>
 </head>
 <body>
-  {{ > map }}
+  <div id="app_container" class="container">
+    {{ > map }}
+  </div>
 </body>
 
 <template name="map">
-  <div id="allmap"></div>
+  <div id="allmap" ></div>
   <div id="r-result">
     {{ map }}
-    <input type="button" onclick="add_control();" value="添加" />
-    <input type="button" onclick="delete_control();" value="删除" />
+    <div class="container" id="button_container">
+        <button class="btn btn-primary" type="button">Drop Gift</button>
+    </div>
   </div>
-  <p>在地图的左上、右上分别展示完整、缩略样式的缩放平移控件；同时在地图的左上方展示比例尺控件，点击按钮查看效果</p>
   <script type="text/javascript">
     // 百度地图API功能
     var map = new BMap.Map("allmap");
