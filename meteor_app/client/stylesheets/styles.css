@@ -27,3 +27,18 @@ body {
         margin: 5;
         width: 100%;
     }
+
+#gift_details_container {
+    background-color: white;   
+}
+
+
+.modal .modal-dialog {
+    background-color: white;
+    border-radius: 5px;
+    width: 460px;
+}
+
+#publish_gift {
+    width: 100%;
+}

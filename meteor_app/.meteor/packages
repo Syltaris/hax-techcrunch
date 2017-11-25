@@ -22,3 +22,7 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 session
 twbs:bootstrap
 sacha:spin
+peppelg:bootstrap-3-modal
+iron:router
+ian:accounts-ui-bootstrap-3
+accounts-password
