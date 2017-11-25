@@ -51,8 +51,7 @@
 
 
         var marker = new BMap.Marker(point);
-        marker.enableDragging();
-
+        
         map.addEventListener("click",function(e){
             deletePoint();
             add_marker(new BMap.Point(e.point.lng, e.point.lat));
