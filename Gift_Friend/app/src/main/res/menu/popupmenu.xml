@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="红包"
+        android:id="@+id/money"></item>
+    <item android:title="电影票"
+        android:id="@+id/tick"></item>
+    <item android:title="玫瑰"
+        android:id="@+id/mei_gui"></item>
+    <item android:title="..."
+        android:id="@+id/more"></item>
+
+
+</menu>
