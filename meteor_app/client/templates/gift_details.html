@@ -4,7 +4,7 @@
     <div class="modal fade">
         <div class="modal-dialog">
             <div class="modal-header">
-                <h4 class="modal-title">Gift Details</h4>
+                <h4 class="modal-title">Drop a gift</h4>
             </div>
             <div class="modal-body">
                 <form class="marker-submit">
@@ -16,23 +16,21 @@
                         <option>Coffee</option>
                         <option>Book</option>
                     </select>
-                    <label class="custom-control custom-radio">
-                    <input id="gift_visibility_private" name="radio" type="radio" class="custom-control-input">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Private</span>
-                    </label>
-                    <label class="custom-control custom-radio">
-                    <input id="gift_visibility_public" name="radio" type="radio" class="custom-control-input">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Public</span>
-                    </label>
                     <div class="form-check">
-                    <label class="form-check-label">
-                        <input name="message_first" class="form-check-input" type="checkbox" value="message_first">
-                        Message first?
-                    </label>
+                        <label class="form-check-label">
+                            <input name="message_first" class="form-check-input" type="checkbox" value="public">
+                            Public
+                        </label>
+                        <label class="form-check-label">
+                            <input name="message_first" class="form-check-input" type="checkbox" value="message_first">
+                            Message first?
+                        </label>
                     </div>
-                    <input id="publish_gift" class="btn btn-default btn-block" data-dismiss="modal" type="submit" value="Submit">
+                    <div class="payment_button_container container">
+                        <label>Pay by: </label>
+                        <button class="btn" style="background-color:dodgerblue;width:40%;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI1SURBVEhL7VXPTxNBFO7J/8I/i5C0IDGGGI0hiicNF0HDiaNyYVeNKGpNKhhBhQOoUQkHKTYlgd3abUvbbeyP7Y+tbRce7w3TutvZlC5e+ZIvk93Z930z773Z8Z3jzBh4HbkQkNSpgKSEA7KqeibFYTzpcEkRzEBW4X/pl9V7XFIETv5yC2pz/E0Cpj+k2eg236Gk7HBJEX5J0VyDOJfCRSDQ6DbfJulwSRF2kyvPfsPEYsrBjb0yM6Gxe46+92wysZQCvdx0sNY4ZCY0ds/R955NiNcX4nArmOhwbddgJjTa3488iXViiJ5MvscqUMVVu9FsnuyqaR05UkX0ZNKLD9d1ZhJOmcJcXyZDj1V4sJKG+c0/sLCVh9nPObi/nIbR+X8rjmZMZvJoQ3cYEE81ufFSg0ShAUbdgt1Mna20ZFpM0Do8gj29Dh+jJfacq7TgUlc9+jL5olTg3U5RKOY4Fjj0swBZ7KQ2aCHLkRLu8gCGcfd9m0TSJkuX3cDOVd5hZTSwg57X8fzMrGXg8tNYgkuKIJMfsSpcfR4XxIeQtGpC1mjCtRdxuPs2Cd+wAymNduC5aXFJEWQy+f4AtpM1lh4mjruidFAtCPu5vzD2SnMs4GZQg09Rg7UzIV9t9TahIGrPQs2COp6FRuskUMNmmPuacy10m9Q0ZKYbjR4mtr8w7eA2/m3vhJLCYTuNmMoehZfVSbcgr/TLyiKXFEE3Gl04Z74ZkX5JDQ3K+xe55Dm8wuc7BvmVTxMy/2tqAAAAAElFTkSuQmCC" data-dismiss="modal"><a href={{pathFor 'payment'}} style="height:20px;">&nbsp;Alipay</a></button>
+                        <button class="btn" style="background-color:firebrick;width:40%;"><img src="http://steelguru.com/uploads/news/citic-executive-recalls-lost-opportunity-for-fmg-deal_97947.png" style="width: 25px;height:25px;background-color:aliceblue;border-radius:25px;" data-dismiss="modal" onclick={{pathFor 'payment'}}><a href={{pathFor 'payment'}} style="height:20px;">&nbsp;Citic Points</a></button>
+                    </div>
                 </form>
             </div>
         </div>

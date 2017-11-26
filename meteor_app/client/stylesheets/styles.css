@@ -2,7 +2,7 @@
 body {
     align-content: center;
     align-items: center;
-    background: #85144b;
+    background: #0C1212;
 }
 
 #app_container {
@@ -12,7 +12,7 @@ body {
     border-color: #000000;
     border-width: 10px;
     border-radius: 2px;
-    background-color: white;
+    background-color: #E8AE5B;
     position: fixed;
 }
 
@@ -23,6 +23,7 @@ body {
 
 #r-result input {
     width: 100px;
+    margin: 5px;
 }
 
 #button_container {
@@ -30,8 +31,9 @@ body {
 }
 
     #button_container button {
-        margin: 5;
+        margin: 10px;
         width: 100%;
+
     }
 
 #gift_details_container {
@@ -49,3 +51,13 @@ body {
 #publish_gift {
     width: 100%;
 }
+
+#payment_button_container {
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+    #payment_button_container button {
+        width: 100%;
+    }

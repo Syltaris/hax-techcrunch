@@ -4,7 +4,7 @@ Template.GiftDetails.helpers({
 })
 
 Template.GiftDetails.events({
-    'submit .marker-submit': function(e) {
+    'submit form': function(e) {
         e.preventDefault();
 
         var data = e.target;

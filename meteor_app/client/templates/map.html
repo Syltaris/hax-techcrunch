@@ -8,11 +8,6 @@
         <div class="container" id="button_container">
             <button class="btn btn-primary" type="button" onclick="add_post_marker()">Drop Gift</button>
         </div>
-        {{#each get_markers }}
-        <script type="text/javascript">
-            {{{ add_marker }}}
-        </script>
-        {{/each }}
     </div>
     <script type="text/javascript">
         // 百度地图API功能
@@ -24,7 +19,7 @@
         var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
         var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
         /*缩放控件type有四种类型:
-        BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM：仅包含缩放按钮*/
+        BMAP_NAVIGATION_CONTROL_SMALL：仅包含平移和缩放按钮；BMAP_NAVIGATION_CONTROL_PAN:仅包含平移按钮；BMAP_NAVIGATION_CONTROL_ZOOM await resolveAfter2Seconds(：仅包含缩放按钮*/
     
         // add in some angpows
         var pt = new BMap.Point(121.371048, 31.17370);
@@ -84,7 +79,6 @@
             var marker3 = new BMap.Marker(new BMap.Point(document.getElementById('lng_coords').getAttribute('value'), document.getElementById('lng_coords').getAttribute('value')),{icon:myIcon});
             map.addOverlay(marker3);
         }
-
     </script>
 </template>
       

@@ -8,6 +8,10 @@ Router.route('/', {
     name: 'bmap'
 });
 
+Router.route('/payment'), {
+    name: 'payment'
+}
+
 var requireLogin = function() {
     if (!Meteor.user()) {
         if (Meteor.loggingIn()) {
